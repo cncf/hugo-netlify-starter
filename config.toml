@@ -1,0 +1,15 @@
+title = "Hugo Netlify Starter"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+font_awesome_version = "5.12.0"
+
+[[params.fonts]]
+name = "Open Sans"
+sizes = [300, 400, 600, 700]
+type = "sans_serif"
+
+[[params.fonts]]
+name = "Roboto Mono"
+sizes = [300, 400, 600, 700]
+type = "monospace"

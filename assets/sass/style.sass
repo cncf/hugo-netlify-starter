@@ -1,0 +1,40 @@
+@charset "utf-8"
+{{ $fonts := site.Params.fonts }}
+{{ if $fonts }}
+{{ $fontSlice := (slice) }}
+{{ range $fonts }}
+{{ $fontSlice = $fontSlice | append (printf "%s:%s" (replace .name " " "+") (delimit .sizes ",")) }}
+{{ $fontsUrl := printf "https://fonts.googleapis.com/css?family=%s" (delimit $fontSlice "|") }}
+@import url({{ $fontsUrl }})
+{{ end }}
+{{ end }}
+
+{{ $fontAwesomeVersion := site.Params.font_awesome_version }}
+{{ if $fontAwesomeVersion }}
+@import url({{ $fontAwesomeVersion }})
+{{ end }}
+
+// Site-specific variables here
+
+// Initial Bulma imports
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/functions"
+
+// Bulma-specific overrides
+
+// Font overrides
+{{ if $fonts }}
+// Sans-serif font
+{{ with (index (where $fonts ".type" "sans_serif") 0).name }}
+$family-sans-serif: "{{ . }}", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+{{ end }}
+
+// Monospace font
+{{ with (index (where $fonts ".type" "monospace") 0).name }}
+$family-monospace: "{{ . }}", monospace
+{{ end }}
+{{ end }}
+
+// Final Bulma imports
+@import "bulma/sass/utilities/derived-variables"
+@import "bulma/bulma"
