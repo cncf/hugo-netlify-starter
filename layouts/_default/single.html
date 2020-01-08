@@ -1,0 +1,37 @@
+{{ $lang := site.LanguageCode }}
+<!DOCTYPE html>
+<html{{ with $lang }} lang="{{ . }}"{{ end }}>
+  <head>
+    <title class="title is-1">
+      {{ block "title" . }}
+        {{ site.Title }}
+      {{ end }}
+    </title>
+    {{ partial "css.html" . }}
+    {{ partial "favicon.html" . }}
+  </head>
+  <body class="is-page has-navbar-fixed-top">
+    <main class="is-main">
+      {{ partial "navbar.html" . }}
+
+      <section class="columns is-1">
+
+        {{ if (.Params.toc) }}
+          {{ partial "toc.html" . }}
+        {{end}}
+
+        <article class="column">
+          <header>
+              <h1 class="title is-1">{{ .Title }}</h1>
+          </header>
+
+          {{ partial "docs/content.html" . }}
+
+        </article>
+      </section>
+    </main>
+
+    {{ partial "footer.html" . }}
+    {{ partial "javascript.html" }}
+  </body>
+</html>
