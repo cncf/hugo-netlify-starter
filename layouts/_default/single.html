@@ -16,9 +16,9 @@
       <div class="container">
         {{ partial "navbar.html" . }}
 
-        <header>
+        <header class="has-bottommargin">
             <h1 class="title">{{ .Title }}</h1>
-            <p class="subtitle is-spaced">{{ .Description | markdownify }}</p>
+            <p class="subtitle">{{ .Description | markdownify }}</p>
         </header>
 
         <section class="columns is-1">
