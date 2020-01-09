@@ -31,3 +31,17 @@ This repository comes with a pre-configured `netlify.toml` file. To build to net
 
 3. Install Netlify with access to your documentation site repository.
 4. Leave all other settings as default and click **Deploy Site**.
+
+# What's included
+
+This repository has two layouts with minimal styling, all stored under `/layouts/_default`:
+
+A **homepage** template, a basic homepage which uses the following:
+  * The `baseof.html` file and partials in the `/partials/home` directory
+  * Some helpers in the `/assets/sass/helpers.sass` file
+
+A **docs** template, a basic content page with submenu which uses the following:
+  * The `single.html` file and partials in the `/partials/docs` directory
+  * Classes in the `/assets/sass/helpers.sass` and `/assets/sass/_docs.sass` files
+
+Both use default components and styling from the Bulma CSS framework. No menus are structured, because menu structure is highly dependant on the nature of the project.
