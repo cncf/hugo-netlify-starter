@@ -1,4 +1,5 @@
 {{ $lang := site.LanguageCode }}
+
 <!DOCTYPE html>
 <html{{ with $lang }} lang="{{ . }}"{{ end }}>
   <head>
@@ -12,25 +13,27 @@
   </head>
   <body class="is-page has-navbar-fixed-top">
     <main class="is-main">
-      {{ partial "navbar.html" . }}
+      <div class="container">
+        {{ partial "navbar.html" . }}
 
-      <section class="columns is-1">
+        <header>
+            <h1 class="title">{{ .Title }}</h1>
+            <p class="subtitle is-spaced">{{ .Description | markdownify }}</p>
+        </header>
 
-        {{ if (.Params.toc) }}
-          {{ partial "toc.html" . }}
-        {{end}}
+        <section class="columns is-1">
+          <section class="column">
+            {{ partial "docs/content.html" . }}
+          </section>
 
-        <article class="column">
-          <header>
-              <h1 class="title is-1">{{ .Title }}</h1>
-          </header>
+          <section class="column is-one-fifth navsection">
+            {{ partial "docs/docs-nav.html" . }}
+          </section>
 
-          {{ partial "docs/content.html" . }}
 
-        </article>
-      </section>
-    </main>
-
+        </section>
+      </main>
+    </div>
     {{ partial "footer.html" . }}
     {{ partial "javascript.html" }}
   </body>

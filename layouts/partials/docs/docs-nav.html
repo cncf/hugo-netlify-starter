@@ -1,0 +1,6 @@
+{{ $hastoc := .Params.toc }}
+{{ $toc := .TableOfContents }}
+
+{{ if ($hastoc) }}
+  {{ $toc }}
+{{ end }}
