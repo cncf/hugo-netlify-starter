@@ -2,19 +2,11 @@
 
 <!DOCTYPE html>
 <html{{ with $lang }} lang="{{ . }}"{{ end }}>
-  <head>
-    <title class="title is-1">
-      {{ block "title" . }}
-        {{ site.Title }}
-      {{ end }}
-    </title>
-    {{ partial "css.html" . }}
-    {{ partial "favicon.html" . }}
-  </head>
-  <body class="is-page has-navbar-fixed-top">
-
+  {{ block "head" . }}
+  {{ end }}
+  {{ block "body" . }}
+  {{ end }}
     <main class="is-main">
-
       <header class="single-hero hero is-info is-bold has-bottom-margin">
         <div class="hero-body">
           <div class="container">
@@ -23,19 +15,15 @@
             </div>
         </div>
       </header>
-
       <div class="container">
         {{ partial "navbar.html" . }}
         <section class="columns">
           <section class="column">
             {{ partial "docs/content.html" . }}
           </section>
-
-          <section class="column is-one-fifth">
+          <section class="column is-one-fifth navsection">
             {{ partial "docs/docs-nav.html" . }}
           </section>
-
-
         </section>
       </main>
     </div>

@@ -1,6 +1,8 @@
 {{ $lang := site.LanguageCode }}
 <!DOCTYPE html>
 <html{{ with $lang }} lang="{{ . }}"{{ end }}>
+
+  {{ define "head" }}
   <head>
     <title>
       {{ block "title" . }}
@@ -10,7 +12,11 @@
     {{ partial "css.html" . }}
     {{ partial "favicon.html" . }}
   </head>
-  <body class="is-page has-navbar-fixed-top">
+  {{ end }}
+
+  {{ define "body" }}
+    <body class="is-page has-navbar-fixed-top">
+  {{ end }}
     <main class="is-main">
       {{ partial "navbar.html" . }}
 
