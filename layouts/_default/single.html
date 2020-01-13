@@ -12,21 +12,26 @@
     {{ partial "favicon.html" . }}
   </head>
   <body class="is-page has-navbar-fixed-top">
-    <main class="is-main">
-      <div class="container">
-        {{ partial "navbar.html" . }}
 
-        <header class="has-bottom-margin">
+    <main class="is-main">
+
+      <header class="single-hero hero is-info is-bold has-bottom-margin">
+        <div class="hero-body">
+          <div class="container">
             <h1 class="title">{{ .Title }}</h1>
             <p class="subtitle">{{ .Description | markdownify }}</p>
-        </header>
+            </div>
+        </div>
+      </header>
 
-        <section class="columns is-1">
+      <div class="container">
+        {{ partial "navbar.html" . }}
+        <section class="columns">
           <section class="column">
             {{ partial "docs/content.html" . }}
           </section>
 
-          <section class="column is-one-fifth navsection">
+          <section class="column is-one-fifth">
             {{ partial "docs/docs-nav.html" . }}
           </section>
 

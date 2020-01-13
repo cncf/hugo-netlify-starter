@@ -1,4 +1,6 @@
-
+.single-hero .hero-body
+  padding: 1.5rem 0
+  
 .title
   @extend .title
   @extend .is-1
@@ -6,12 +8,22 @@
   margin-top: 1rem
   margin-bottom: 1.5rem
 
-#TableOfContents ul
-  @extend .menu-list
-
-.hashlink
-  font-size: 1rem
-
 .subtitle
   @extend .subtitle
   color: #a3a3a3
+
+.hashlink
+  @extend .icon
+  font-size: 1rem
+  height: 1rem
+  width: 1rem
+
+.headline-hash
+  display: none
+
+h1:hover > .headline-hash, h2:hover > .headline-hash, h3:hover > .headline-hash,
+h4:hover > .headline-hash, h5:hover > .headline-hash, h6:hover > .headline-hash
+  display: inline
+
+#TableOfContents ul
+  @extend .menu-list
