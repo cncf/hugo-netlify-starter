@@ -1,7 +1,6 @@
 {{ $lang := site.LanguageCode }}
 <!DOCTYPE html>
 <html{{ with $lang }} lang="{{ . }}"{{ end }}>
-
   <head>
     <title>
       {{ block "title" . }}
@@ -18,7 +17,6 @@
       {{ block "main" . }}
       {{ end }}
     </main>
-
     {{ partial "footer.html" . }}
     {{ partial "javascript.html" }}
   </body>
