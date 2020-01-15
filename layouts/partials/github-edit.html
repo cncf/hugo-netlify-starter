@@ -1,5 +1,4 @@
-<div class="container has-bottom-margin">
-  <p class="is-pulled-right">
+<div class="is-pulled-right has-bottom-margin-sm">
     {{ $repoUrl := .Site.Params.repositoryUrl }}
     {{ $filePath := .File.Path }}
     {{ $editUrl := print $repoUrl "/content/" $filePath }}
@@ -7,5 +6,8 @@
       <i class="fas fa-pen"></i> &nbsp; Edit on GitHub
       </button>
     </a>
+  <p>
+    {{ $hashUrl := print $repoUrl "/commit/" .GitInfo.Hash }}
+  <a href="{{ $hashUrl }}" class="lastupdated">Last Updated: {{ .GitInfo.AuthorDate.Format "2006-01-02" }}</a>
   </p>
 </div>

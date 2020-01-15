@@ -1,3 +1,4 @@
+/* Header & Hero */
 .single-hero .hero-body
   padding: 1.5rem
   code
@@ -15,6 +16,16 @@
   @extend .subtitle
   color: #a3a3a3
 
+/* Left Nav */
+#TableOfContents
+  ul
+    @extend .menu-list
+  a
+    border-bottom: 1px solid $cncf-light-gray
+  li ul, ul li ul
+    margin: 0
+
+/* Body */
 .hashlink
   @extend .icon
   font-size: 1rem
@@ -28,10 +39,9 @@ h1:hover > .headline-hash, h2:hover > .headline-hash, h3:hover > .headline-hash,
 h4:hover > .headline-hash, h5:hover > .headline-hash, h6:hover > .headline-hash
   display: inline
 
-#TableOfContents
-  ul
-    @extend .menu-list
-  a
-    border-bottom: 1px solid $cncf-light-gray
-  li ul, ul li ul
-    margin: 0
+.content
+  max-width: 50rem
+
+.lastupdated
+  font-size: 0.66rem
+  color: #ffffff
