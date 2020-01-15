@@ -2,6 +2,8 @@ title = "Hugo Netlify Starter"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 copyright = "Cloud Native Computing Foundation"
 
+enableGitInfo = true
+
 [markup.highlight]
 style = "paraiso-dark"
 
