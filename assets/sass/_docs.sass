@@ -1,5 +1,8 @@
 .single-hero .hero-body
-  padding: 1.5rem 0
+  padding: 1.5rem
+  code
+    border-radius: 2px
+    padding: 0.1rem 0.2rem 0.1rem 0.2rem
 
 .title
   @extend .title
@@ -25,13 +28,10 @@ h1:hover > .headline-hash, h2:hover > .headline-hash, h3:hover > .headline-hash,
 h4:hover > .headline-hash, h5:hover > .headline-hash, h6:hover > .headline-hash
   display: inline
 
-.content
-  /*width: 48rem*/
-  table
-    tbody
-      font-size: 0.889rem
-
-#TableOfContents ul
-  @extend .menu-list
+#TableOfContents
+  ul
+    @extend .menu-list
   a
-    padding: 0 0
+    border-bottom: 1px solid $cncf-light-gray
+  li ul, ul li ul
+    margin: 0

@@ -1,9 +1,11 @@
-<p class="is-pulled-right">
-  {{ $repoUrl := .Site.Params.repositoryUrl }}
-  {{ $filePath := .File.Path }}
-  {{ $editUrl := print $repoUrl "/content/" $filePath }}
-  <a href="{{ $editUrl }}" target="_blank"><button class="button is-small">
-    <i class="fas fa-pen"></i> &nbsp; Edit on GitHub
-    </button>
-  </a>
-</p>
+<div class="container has-bottom-margin">
+  <p class="is-pulled-right">
+    {{ $repoUrl := .Site.Params.repositoryUrl }}
+    {{ $filePath := .File.Path }}
+    {{ $editUrl := print $repoUrl "/content/" $filePath }}
+    <a href="{{ $editUrl }}" target="_blank"><button class="button is-small">
+      <i class="fas fa-pen"></i> &nbsp; Edit on GitHub
+      </button>
+    </a>
+  </p>
+</div>
