@@ -9,6 +9,8 @@ style = "paraiso-dark"
 font_awesome_version = "5.12.0"
 description = "Boilerplate for building beautiful websites"
 favicon = "favicon.png"
+repositoryUrl = "https://github.com/cncf/hugo-netlify-starter"
+contentDir = "/content/"
 
 [params.logos]
 navbar = "cncf-color.png"
@@ -42,7 +44,6 @@ weight = 1
 name = "CNCF"
 url = "https://cncf.io"
 weight = 2
-
 
 [[menu.main]]
 name = "Test"

@@ -60,6 +60,7 @@ $family-monospace: "{{ . }}", monospace
 
 // Bulma variable overrdides that require derived variables like $dark
 $footer-background-color: $dark
+$menu-list-border-left: 0px
 
 {{ with $extraColors }}
 {{ range . }}
@@ -86,7 +87,7 @@ $colors: mergeColorMaps(("{{ .name }}": ({{ .hex }}, $white)), $colors)
 // @import "bulma/sass/elements/image"
 // @import "bulma/sass/elements/notification"
 // @import "bulma/sass/elements/progress"
-// @import "bulma/sass/elements/table"
+@import "bulma/sass/elements/table"
 // @import "bulma/sass/elements/tag"
 @import "bulma/sass/elements/title"
 // @import "bulma/sass/elements/other"
