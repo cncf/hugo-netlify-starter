@@ -15,6 +15,15 @@ A Pod encapsulates an application's container (or, in some cases, multiple conta
 
 [Docker](https://www.docker.com) is the most common container runtime used in a Kubernetes Pod, but Pods support other [container runtimes](/docs/setup/production-environment/container-runtimes/) as well.
 
+This is a test table:
+
+Value | Description
+:-----|:-----------
+`Pending` | The Pod has been accepted by the Kubernetes system, but one or more of the Container images has not been created. This includes time before being scheduled as well as time spent downloading images over the network, which could take a while.
+`Running` | The Pod has been bound to a node, and all of the Containers have been created. At least one Container is still running, or is in the process of starting or restarting.
+`Succeeded` | All Containers in the Pod have terminated in success, and will not be restarted.
+`Failed` | All Containers in the Pod have terminated, and at least one Container has terminated in failure. That is, the Container either exited with non-zero status or was terminated by the system.
+`Unknown` | For some reason the state of the Pod could not be obtained, typically due to an error in communicating with the host of the Pod.
 
 Pods in a Kubernetes cluster can be used in two main ways:
 
@@ -38,6 +47,10 @@ Note that grouping multiple co-located and co-managed containers in a single Pod
 Some Pods have init containers as well as app containers. Init containers run and complete before the app containers are started.
 
 Pods provide two kinds of shared resources for their constituent containers: *networking* and *storage*.
+
+Here's a giant architecture diagram
+
+![Architecture Diagram](/img/test/architecture.png)
 
 #### Networking
 

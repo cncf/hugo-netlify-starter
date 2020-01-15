@@ -1,19 +1,23 @@
 {{ define "main" }}
-  <header class="single-hero hero is-info is-bold has-bottom-margin">
+  <header class="single-hero hero is-info is-bold">
     <div class="hero-body">
       <div class="container">
+        {{ partial "github-edit.html" . }}
+
         <h1 class="title">{{ .Title }}</h1>
-        <p class="subtitle">{{ .Description | markdownify }}</p>
-        </div>
+        <h2 class="subtitle">{{ .Description | markdownify }}</h2>
+      </div>
     </div>
   </header>
+  <div class="container page-meta  has-bottom-margin">
+  </div>
   <div class="container">
       {{ partial "navbar.html" . }}
       <section class="columns">
         <section class="column">
           {{ partial "docs/content.html" . }}
         </section>
-        <section class="column is-one-fifth navsection">
+        <section class="column is-two-fifths navsection">
           {{ partial "docs/docs-nav.html" . }}
         </section>
       </section>
