@@ -2,11 +2,12 @@
   <header class="single-hero hero is-info is-bold">
     <div class="hero-body">
       <div class="container">
-        {{ partial "github-edit.html" . }}
-
         <h1 class="title">{{ .Title }}</h1>
         <h2 class="subtitle">{{ .Description | markdownify }}</h2>
       </div>
+    </div>
+    <div class="hero-foot">
+      {{ partial "github-edit.html" . }}
     </div>
   </header>
   <div class="container page-meta  has-bottom-margin">
@@ -17,7 +18,7 @@
         <section class="column">
           {{ partial "docs/content.html" . }}
         </section>
-        <section class="column is-two-fifths navsection">
+        <section class="column is-one-fifth navsection">
           {{ partial "docs/docs-nav.html" . }}
         </section>
       </section>
