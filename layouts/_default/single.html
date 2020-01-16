@@ -2,6 +2,7 @@
   <header class="single-hero hero is-info is-bold">
     <div class="hero-body">
       <div class="container">
+            {{ partial "breadcrumb.html" . }}
             <h1 class="title">{{ .Title }}</h1>
             <h2 class="subtitle">{{ .Description | markdownify }}</h2>
       </div>
@@ -17,7 +18,7 @@
   <div class="container">
       {{ partial "navbar.html" . }}
       <section class="columns">
-        <section class="column">
+        <section class="column is-two-thirds">
           {{ partial "docs/content.html" . }}
         </section>
         <section class="column is-one-fifth navsection">
