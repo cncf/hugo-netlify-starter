@@ -35,12 +35,9 @@
 .headline-hash
   display: none
 
-h1:hover > .headline-hash, h2:hover > .headline-hash, h3:hover > .headline-hash,
-h4:hover > .headline-hash, h5:hover > .headline-hash, h6:hover > .headline-hash
-  display: inline
-
-.content
-  max-width: 50rem
+@for $i from 1 through 6
+  h#{$i}:hover > .headline-hash
+    display: inline
 
 .lastupdated
   font-size: 0.66rem
