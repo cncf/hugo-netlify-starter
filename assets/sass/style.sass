@@ -19,14 +19,33 @@
 {{ end }}
 
 // Site-specific variables here
+
+// colors
+// 1 = lightest, 10 = darkest. These are an optical gradient - no opportunity for Sass color math
 $cncf-blue: #426cab
 $cncf-green: #76c5d5
-$cncf-pink: #e00a6b
-$cncf-purple-dark: #0f1433
-$cncf-purple-medium: #262961
-$cncf-purple-light: #47529e
-$cncf-purple-very-light: #9eacdd
-$cncf-light-gray: #f0f5f7
+
+$cncf-blue-1: #F0F5F7
+$cncf-blue-2: #E4F2F4
+$cncf-blue-3: #CDEEF2
+$cncf-blue-4: #B2E0EA
+$cncf-blue-5: $cncf-green
+$cncf-blue-6: #5BAECE
+$cncf-blue-7: #4583BB
+$cncf-blue-8: $cncf-blue
+$cncf-blue-9: #1E4D94
+$cncf-blue-10: #072C63
+
+$cncf-violet-1: #FFF5FA
+$cncf-violet-2: #FCE2ED
+$cncf-violet-3: #FAC6DD
+$cncf-violet-4: #F492BE
+$cncf-violet-5: #E70266
+$cncf-violet-6: #B30163
+$cncf-violet-7: #840363
+$cncf-violet-8: #521A60
+$cncf-violet-9: #32225E
+$cncf-violet-10: #0F1433
 
 // Extra colors specified in config
 {{ with $extraColors }}
@@ -41,6 +60,16 @@ ${{ .name }}: '{{ .hex }}'
 
 // Bulma-specific overrides
 $primary: $cncf-blue
+$link: $cncf-violet-5
+$info: $cncf-blue-6
+
+$size-1: 2.488rem
+$size-2: 2.074rem
+$size-3: 1.728rem
+$size-4: 1.44rem
+$size-5: 1.2rem
+$size-6: 1rem
+$size-7: 0.833rem
 
 // Font overrides
 {{ if $fonts }}

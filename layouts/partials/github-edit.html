@@ -1,13 +1,12 @@
-<div class="is-pulled-right has-bottom-margin-sm">
+<div class="github-edit is-pulled-right">
     {{ $repoUrl := .Site.Params.repositoryUrl }}
     {{ $filePath := .File.Path }}
     {{ $editUrl := print $repoUrl "/content/" $filePath }}
-    <a href="{{ $editUrl }}" target="_blank"><button class="button is-small">
+    <button class="button is-small"><a href="{{ $editUrl }}" target="_blank">
       <i class="fas fa-pen"></i> &nbsp; Edit on GitHub
-      </button>
-    </a>
-  <p>
+    </a></button>
+  <!-- <p>
     {{ $hashUrl := print $repoUrl "/commit/" .GitInfo.Hash }}
   <a href="{{ $hashUrl }}" class="lastupdated">Last Updated: {{ .GitInfo.AuthorDate.Format "2006-01-02" }}</a>
-  </p>
+  </p> -->
 </div>

@@ -1,6 +1,7 @@
 {{ $hastoc := .Params.toc }}
 {{ $toc := .TableOfContents }}
 
+<div class="menu-label"> {{ .Title }}</div>
 {{ if ($hastoc) }}
   {{ $toc }}
 {{ end }}

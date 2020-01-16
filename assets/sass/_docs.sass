@@ -21,7 +21,7 @@
   ul
     @extend .menu-list
   a
-    border-bottom: 1px solid $cncf-light-gray
+    border-bottom: 1px solid $cncf-blue-1
   li ul, ul li ul
     margin: 0
 
@@ -39,6 +39,11 @@
   h#{$i}:hover > .headline-hash
     display: inline
 
-.lastupdated
-  font-size: 0.66rem
-  color: #ffffff
+.docs-title
+  background: linear-gradient(99.62deg, $cncf-green 3.15%, $cncf-violet-6 88.41%)
+  h1, h2
+    color: #ffffff
+
+.page-meta
+  .breadcrumb, .github-edit
+    display: inline
