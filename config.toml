@@ -33,9 +33,14 @@ sizes = [300, 400, 600, 700]
 type = "sans_serif"
 
 [[params.fonts]]
-name = "Roboto Mono"
+name = "Fira Mono"
 sizes = [300, 400, 600, 700]
 type = "monospace"
+
+[[params.fonts]]
+name = "Fire Sans"
+sizes = [100, 200, 300, 400, 500, 600, 700]
+type = "heading_font"
 
 [[menu.main]]
 name = "Home"
