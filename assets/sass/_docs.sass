@@ -1,20 +1,25 @@
 /* Header & Hero */
+
 .single-hero .hero-body
   padding: 1.5rem
   code
     border-radius: 2px
     padding: 0.1rem 0.2rem 0.1rem 0.2rem
 
+.docs-title
+  background: linear-gradient(99.62deg, $cncf-green 3.15%, $cncf-violet-6 88.41%)
+  h1, h2
+    color: #ffffff
+
 .title
   @extend .title
-  @extend .is-1
   font-weight: 200
+  font-size: 3.815rem
   margin-top: 1rem
   margin-bottom: 1.5rem
 
 .subtitle
-  @extend .subtitle
-  color: #a3a3a3
+  font-weight: 200
 
 /* Left Nav */
 #TableOfContents
@@ -39,11 +44,46 @@
   h#{$i}:hover > .headline-hash
     display: inline
 
-.docs-title
-  background: linear-gradient(99.62deg, $cncf-green 3.15%, $cncf-violet-6 88.41%)
-  h1, h2
-    color: #ffffff
-
 .page-meta
   .breadcrumb, .github-edit
     display: inline
+
+.content
+  h1
+    font-size: $size-1
+    font-weight: 200
+  h2
+    font-size: $size-2
+    font-weight: 100
+  h3
+    font-size: $size-3
+    font-weight: 300
+  h4
+    font-size: $size-4
+    font-weight: 500
+  h5
+    font-size: $size-5
+    font-weight: 600
+  h6
+    font-size: $size-6
+    font-weight: 700
+  table
+    background-color: $white
+    thead th
+      border-bottom: 1px solid $cncf-blue-4
+      background-color: $cncf-blue-4
+      font-size: $size-7
+      font-weight: 600
+      letter-spacing: 0.02rem
+      text-transform: uppercase
+    td
+      border-bottom: 1px solid $cncf-blue-2
+      background-color: $cncf-blue-1
+
+code
+  background-color: $white-ter
+  color: $cncf-violet-5
+  padding: 0.1rem 0.35rem 0.1rem 0.3rem
+  border-radius: 2px
+  pre
+    background-color: transparent

@@ -9,9 +9,9 @@ menu: docs
 
 ## Understanding Pods
 
-A *Pod* is the basic execution unit of a Kubernetes application--the smallest and simplest unit in the Kubernetes object model that you create or deploy. A Pod represents processes running on your cluster.
+A *Pod* is the basic execution unit of a Kubernetes application--the smallest and simplest unit in the Kubernetes object model that you create or deploy. A Pod represents processes running on your cluster. More `code highlights`
 
-A Pod encapsulates an application's container (or, in some cases, multiple containers), storage resources, a unique network IP, and options that govern how the container(s) should run. A Pod represents a unit of deployment: *a single instance of an application in Kubernetes*, which might consist of either a single container or a small number of containers that are tightly coupled and that share resources.
+A Pod encapsulates an application's container (or, in some cases, multiple containers), storage resources, a unique network IP, and options that govern how the container(s) should run. Here's some `code highlights interspersed with text`. A Pod represents a unit of deployment: *a single instance of an application in Kubernetes*, which might consist of either a single container or a small number of containers that are tightly coupled and that share resources.
 
 [Docker](https://www.docker.com) is the most common container runtime used in a Kubernetes Pod, but Pods support other [container runtimes](/docs/setup/production-environment/container-runtimes/) as well.
 
@@ -103,3 +103,23 @@ spec:
 ```
 
 Rather than specifying the current desired state of all replicas, pod templates are like cookie cutters. Once a cookie has been cut, the cookie has no relationship to the cutter. There is no "quantum entanglement". Subsequent changes to the template or even switching to a new template has no direct effect on the pods already created. Similarly, pods created by a replication controller may subsequently be updated directly. This is in deliberate contrast to pods, which do specify the current desired state of all containers belonging to the pod. This approach radically simplifies system semantics and increases the flexibility of the primitive.
+
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+
+### Kubernetes grupuje kontenery, które są częścią jednej aplikacji, w logicznie grupy, ułatwiając ich odnajdywanie i zarządzanie nimi. Korzysta z piętnastoletniego doświadczenia Google w uruchamianiu wielkoskalowych serwisów i łączy je z najlepszymi pomysłami i praktykami wypracowanymi przez społeczność.
+
+###  Разработанный на тех же принципах, которые позволяют Google запускать миллиарды контейнеров в неделю, Kubernetes может масштабироваться без увеличения вашей команды поддержки.
+
+### Nó nhóm các container cấu thành lên một ứng dụng thành các đơn vị logic để dễ dàng quản lý và khám phá. Kubernetes xây dựng dựa trên 15 năm kinh nghiệm vận hành các hệ thống trong môi trường production tại Google, kết hợp với các ý tưởng và thực tiễn tốt nhất từ cộng đồng.

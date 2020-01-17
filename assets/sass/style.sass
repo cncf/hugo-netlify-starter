@@ -60,16 +60,22 @@ ${{ .name }}: '{{ .hex }}'
 
 // Bulma-specific overrides
 $primary: $cncf-blue
-$link: $cncf-violet-5
+$link: $cncf-blue-8
 $info: $cncf-blue-6
 
-$size-1: 2.488rem
-$size-2: 2.074rem
-$size-3: 1.728rem
-$size-4: 1.44rem
-$size-5: 1.2rem
+// Type scale – major third (multiply by 1.25)
+$size-1: 3.052rem
+$size-2: 2.441rem
+$size-3: 1.953rem
+$size-4: 1.563rem
+$size-5: 1.25rem
 $size-6: 1rem
 $size-7: 0.833rem
+
+$weight-light: 200
+$weight-normal: $weight-medium
+$weight-medium: 400
+$weight-bold: 600
 
 // Font overrides
 {{ if $fonts }}
@@ -83,6 +89,11 @@ $family-sans-serif: "{{ . }}", BlinkMacSystemFont, -apple-system, "Segoe UI", "R
 $family-monospace: "{{ . }}", monospace
 {{ end }}
 {{ end }}
+
+$font-heading: {{ $.Site.Params.heading_font | default "'Fira Sans', sans-serif" }}
+
+h1, h2, h3, h4, h5, h6
+ font-family: $font-heading
 
 // Final Bulma imports
 @import "bulma/sass/utilities/derived-variables"
@@ -116,7 +127,7 @@ $colors: mergeColorMaps(("{{ .name }}": ({{ .hex }}, $white)), $colors)
 // @import "bulma/sass/elements/image"
 // @import "bulma/sass/elements/notification"
 // @import "bulma/sass/elements/progress"
-@import "bulma/sass/elements/table"
+// @import "bulma/sass/elements/table"
 // @import "bulma/sass/elements/tag"
 @import "bulma/sass/elements/title"
 // @import "bulma/sass/elements/other"
