@@ -1,18 +1,7 @@
 {{ define "main" }}
   <header class="single-hero hero has-bottom-margin-sm docs-title">
     <div class="hero-body">
-      <div class="container">
-        <section class="columns">
-          <section class="column is-two-thirds">
-            <div class="page-meta">
-                {{ partial "breadcrumb.html" . }}
-                {{ partial "github-edit.html" . }}
-            </div>
-          <h1 class="title">{{ .Title }}</h1>
-          <h2 class="subtitle">{{ .Description | markdownify }}</h2>
-        </section>
-      </section>
-      </div>
+      {{ partial "single-header.html" . }}
     </div>
   </header>
   <div class="container is-white">
