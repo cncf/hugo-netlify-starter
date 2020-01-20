@@ -1,12 +1,10 @@
 ---
-title: "Example subsection child page"
+title: "Section 1 Child Page 1"
 description: "Example description text, lorem ipsum dolor sit amet make it look good"
 date: 2020-01-07T14:59:38+01:00
 draft: true
 toc: true
-menu:
-  docs:
-    parent: 'test-content'
+weight: 20
 ---
 
 ## Section 1 {#section-1}

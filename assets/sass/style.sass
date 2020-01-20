@@ -63,6 +63,9 @@ $primary: $cncf-blue
 $link: $cncf-blue-8
 $info: $cncf-blue-6
 
+.card
+  height: 100%
+
 // Type scale – major third (multiply by 1.25)
 $size-1: 3.052rem
 $size-2: 2.441rem
@@ -113,7 +116,7 @@ $colors: mergeColorMaps(("{{ .name }}": ({{ .hex }}, $white)), $colors)
 @import "bulma/sass/base/_all"
 @import "bulma/sass/elements/container"
 @import "bulma/sass/grid/columns"
-// @import "bulma/sass/grid/tiles"
+@import "bulma/sass/grid/tiles"
 @import "bulma/sass/layout/hero"
 @import "bulma/sass/layout/section"
 @import "bulma/sass/layout/footer"
@@ -142,7 +145,7 @@ $colors: mergeColorMaps(("{{ .name }}": ({{ .hex }}, $white)), $colors)
 
 // Components
 // @import "bulma/sass/components/breadcrumb"
-// @import "bulma/sass/components/card"
+@import "bulma/sass/components/card"
 // @import "bulma/sass/components/dropdown"
 // @import "bulma/sass/components/level"
 // @import "bulma/sass/components/list"
