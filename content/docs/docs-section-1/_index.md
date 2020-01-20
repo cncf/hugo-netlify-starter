@@ -1,5 +1,5 @@
 ---
-title: "Example subsection"
+title: "Section 1 index"
 description: "Example description text, lorem ipsum dolor sit amet make it look good"
 date: 2020-01-07T14:59:38+01:00
 draft: true
