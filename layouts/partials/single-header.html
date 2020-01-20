@@ -1,0 +1,12 @@
+<div class="container">
+  <section class="columns">
+    <section class="column is-two-thirds">
+      <div class="page-meta is-clearfix">
+          {{ partial "breadcrumb.html" . }}
+          {{ partial "github-edit.html" . }}
+      </div>
+    <h1 class="title">{{ .Page.Title | markdownify }}</h1>
+    <h2 class="subtitle">{{ .Page.Description | markdownify }}</h2>
+  </section>
+</section>
+</div>
