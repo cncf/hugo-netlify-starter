@@ -1,24 +1,36 @@
-{{ define "main" }}
-{{ $docsRoot := where .Site.Sections "Section" "docs" }}
-  <main class="content">
-    <div class="container">
-      {{ .Content }}
-      {{ partial "single-header.html" . }}
-        <div class="columns is-multiline">
-          {{ range $docsRoot }}
-            <p> {{ print .Page.Title }}</p>
-          { {end }}
+{{ $allSections  := site.Sections }} <!-- "blog" and "docs" -->
+{{ $docsSections := where $allSections "Section" "docs" }} <!-- "getting-started" and "deployment" -->
+{{ $thisUrl      := .RelPermalink }} <!-- the URL of the current page -->
 
-          <div class="column is-one-third">
-            <div class="card">
-              <a href="{{ .Page.URL }}">
-                <div class="content">
-                  <h2>{{.Title | markdownify }}</h2>
-                  <p>{{ .Page.Description | markdownify }}</p>
-                </div>
-              </a>
-            </div>
-          </div>
-      </div>
-  </main>
+<h2>Docs</h2>
+
+{{ range $docsSections }}
+{{ $isThisPage := eq .RelPermalink $thisUrl }}
+  <ul>
+    <li>
+        <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ range .RegularPages }}
+      <ul>
+        <li>
+        <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}"> <!-- /docs/getting-started and /docs/deployment -->
+          {{ .Title }}                 <!-- this title is the section title, e.g. "Getting started" -->
+        </a>
+        </li>
+      </ul>
+      {{ end }}
+    </li>
+
+    {{ range .Sections }}
+      <li>
+          <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .CurrentSection.Title }}</a>
+        <ul>
+          {{ range .CurrentSection.RegularPages }}
+          <li>
+              <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .Page.Title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+  </ul>
 {{ end }}
