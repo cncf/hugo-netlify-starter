@@ -4,6 +4,7 @@ description: "This page provides an overview of `Pod`, the smallest deployable o
 date: 2020-01-07T14:59:38+01:00
 draft: true
 toc: true
+weight: 30
 ---
 
 ## Understanding Pods

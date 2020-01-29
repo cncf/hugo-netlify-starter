@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ $docsRoot := where .Site.Sections "Section" "docs" }}
+  <main class="content">
+    <div class="container">
+      {{ .Content }}
+      {{ partial "single-header.html" . }}
+        <div class="columns is-multiline">
+          {{ range $docsRoot }}
+          <p> {{ print .Page.Title}}</p>
+          {{ end }}
+
+          <div class="column is-one-third">
+            <div class="card">
+              <a href="{{ .Page.URL }}">
+                <div class="content">
+                  <h2>{{.Title | markdownify }}</h2>
+                  <p>{{ .Page.Description | markdownify }}</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      </div>
+  </main>
+{{ end }}
