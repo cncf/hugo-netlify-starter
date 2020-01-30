@@ -1,36 +1,51 @@
+{{ define "main" }}
+
+
 {{ $allSections  := site.Sections }} <!-- "blog" and "docs" -->
 {{ $docsSections := where $allSections "Section" "docs" }} <!-- "getting-started" and "deployment" -->
 {{ $thisUrl      := .RelPermalink }} <!-- the URL of the current page -->
 
-<h2>Docs</h2>
+<header class="single-hero hero has-bottom-margin-sm docs-title">
+  <div class="hero-body">
+    {{ partial "single-header.html" . }}
+  </div>
+</header>
 
-{{ range $docsSections }}
-{{ $isThisPage := eq .RelPermalink $thisUrl }}
-  <ul>
-    <li>
-        <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ range .RegularPages }}
-      <ul>
-        <li>
-        <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}"> <!-- /docs/getting-started and /docs/deployment -->
-          {{ .Title }}                 <!-- this title is the section title, e.g. "Getting started" -->
-        </a>
-        </li>
-      </ul>
-      {{ end }}
-    </li>
-
-    {{ range .Sections }}
-      <li>
-          <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .CurrentSection.Title }}</a>
+<div class="container">
+  <div class="columns is-multiline">
+  {{ range $docsSections }}
+  {{ $isThisPage := eq .RelPermalink $thisUrl }}
+        <div class="column is-one-quarter">
+          <div class="card">
+          <h3><a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .CurrentSection.Title | markdownify }}</a></h3>
+        {{ range .RegularPages }}
         <ul>
-          {{ range .CurrentSection.RegularPages }}
           <li>
-              <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .Page.Title }}</a>
+          <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">
+            {{ .Title | markdownify }}
+          </a>
           </li>
-          {{ end }}
         </ul>
-      </li>
-    {{ end }}
-  </ul>
+        {{ end }}
+        </div>
+      </div>
+
+      {{ range .Sections }}
+        <div class="column is-one-quarter">
+          <div class="card">
+            <h3><a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .CurrentSection.Title | markdownify }}</a></h3>
+          <ul>
+            {{ range .CurrentSection.RegularPages }}
+            <li>
+                <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
+            </li>
+            {{ end }}
+          </ul>
+          </div>
+        </div>
+      {{ end }}
+  {{ end }}
+  </div>
+</div>
+
 {{ end }}
