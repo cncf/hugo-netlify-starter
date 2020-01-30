@@ -95,8 +95,29 @@ $family-monospace: "{{ . }}", monospace
 
 $font-heading: {{ $.Site.Params.heading_font | default "'Fira Sans', sans-serif" }}
 
-h1, h2, h3, h4, h5, h6
- font-family: $font-heading
+@for $i from 1 through 6
+  h#{$i}
+    font-family: $font-heading
+
+.container
+  h1
+    font-size: $size-1
+    font-weight: 200
+  h2
+    font-size: $size-2
+    font-weight: 100
+  h3
+    font-size: $size-3
+    font-weight: 300
+  h4
+    font-size: $size-4
+    font-weight: 500
+  h5
+    font-size: $size-5
+    font-weight: 600
+  h6
+    font-size: $size-6
+    font-weight: 700
 
 // Final Bulma imports
 @import "bulma/sass/utilities/derived-variables"
