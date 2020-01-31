@@ -25,13 +25,13 @@
 .breadcrumb ul li
   display: inline
 
-/* Left Nav */
-#TableOfContents
+/* Nav */
+nav
   ul
     @extend .menu-list
-  a
-    border-bottom: 1px solid $cncf-blue-1
-  li ul, ul li ul
+  ul ul li
+    border-left: 1px solid $cncf-blue-1
+  .menu-list ul, ul li ul
     margin: 0
 
 /* Body */
@@ -73,3 +73,6 @@ code
 
 .docs-section-nav
   border-left: 1px solid #ebebeb
+  hr
+    height: 1px
+    color: #ebebeb
