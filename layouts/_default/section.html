@@ -12,7 +12,6 @@
 </header>
 
 <div class="container">
-  <div class="columns is-multiline">
   {{ range $docsSections }}
   {{ $isThisPage := eq .RelPermalink $thisUrl }}
         <div class="column is-one-quarter">
@@ -45,7 +44,6 @@
         </div>
       {{ end }}
   {{ end }}
-  </div>
 </div>
 
 {{ end }}
