@@ -116,10 +116,3 @@ Rather than specifying the current desired state of all replicas, pod templates 
 ##### Header 5
 
 ###### Header 6
-
-
-### Kubernetes grupuje kontenery, które są częścią jednej aplikacji, w logicznie grupy, ułatwiając ich odnajdywanie i zarządzanie nimi. Korzysta z piętnastoletniego doświadczenia Google w uruchamianiu wielkoskalowych serwisów i łączy je z najlepszymi pomysłami i praktykami wypracowanymi przez społeczność.
-
-###  Разработанный на тех же принципах, которые позволяют Google запускать миллиарды контейнеров в неделю, Kubernetes может масштабироваться без увеличения вашей команды поддержки.
-
-### Nó nhóm các container cấu thành lên một ứng dụng thành các đơn vị logic để dễ dàng quản lý và khám phá. Kubernetes xây dựng dựa trên 15 năm kinh nghiệm vận hành các hệ thống trong môi trường production tại Google, kết hợp với các ý tưởng và thực tiễn tốt nhất từ cộng đồng.
