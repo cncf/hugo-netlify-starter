@@ -1,4 +1,5 @@
 ---
+title: "Home"
 ---
 
 This is *not* a full-fledged Hugo theme! It's just a convenient way to get started with a brand new site that's wired with:
