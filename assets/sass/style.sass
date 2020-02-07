@@ -11,8 +11,6 @@
 @import url({{ $fontsUrl }})
 {{ end }}
 
-@import url({{ $fontAwesomeVersion }})
-
 {{ with $fontAwesomeVersion }}
 {{ $fontAwesomeUrl := printf "https://use.fontawesome.com/releases/v%s/css/all.css" . }}
 @import url({{ $fontAwesomeUrl }})
