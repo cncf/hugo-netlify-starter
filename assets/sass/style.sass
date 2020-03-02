@@ -144,7 +144,7 @@ $colors: mergeColorMaps(("{{ .name }}": ({{ .hex }}, $white)), $colors)
 
 // @import "bulma/sass/elements/box"
 @import "bulma/sass/elements/button"
-@import "bulma/sass/elements/content"
+// @import "bulma/sass/elements/content"
 @import "bulma/sass/elements/icon"
 // @import "bulma/sass/elements/image"
 // @import "bulma/sass/elements/notification"
@@ -180,5 +180,6 @@ $colors: mergeColorMaps(("{{ .name }}": ({{ .hex }}, $white)), $colors)
 // Grid
 
 // Custom Sass imports
+@import "content"
 @import "helpers"
 @import "docs"
