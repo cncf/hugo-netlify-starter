@@ -12,7 +12,4 @@ command = "make preview-build"
 command = "make preview-build"
 
 [[plugins]]
-package = "netlify-plugin-checklinks"
-
-[[plugins]]
 package = "netlify-plugin-a11y"
