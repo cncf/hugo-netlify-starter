@@ -3,6 +3,7 @@ title: "Home"
 ---
 
 [This is a blatantly broken link](https://kubernetes.io/hl)
+[Add another blatantly broken link](https://kubernetes.io/asdf)
 
 This is *not* a full-fledged Hugo theme! It's just a convenient way to get started with a brand new site that's wired with:
 
