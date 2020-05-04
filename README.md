@@ -1,5 +1,7 @@
 # CNCF Hugo Starter
 
+Test
+
 This repository contains a boilerplate static site generator setup for creating CNCF documentation projects. We strongly recommend using this setup (it helps us help you and your project!), but none of the technologies in the stack are strictly required.
 
 The starter uses the following:
