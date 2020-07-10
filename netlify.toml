@@ -10,6 +10,3 @@ command = "make preview-build"
 
 [context.branch-deploy]
 command = "make preview-build"
-
-[[plugins]]
-package = "netlify-plugin-checklinks"
