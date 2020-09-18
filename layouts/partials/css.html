@@ -1,6 +1,6 @@
 {{- $inServerMode := site.IsServer }}
 {{- $includePaths := (slice "node_modules") }}
-{{- $sass         := "sass/style.sass" }}
+{{- $sass         := "sass/custom.sass" }}
 {{- $cssOutput    := "css/style.css" }}
 {{- $devOpts      := (dict "targetPath" $cssOutput "includePaths" $includePaths "enableSourceMap" true) }}
 {{- $prodOpts     := (dict "targetPath" $cssOutput "includePaths" $includePaths "outputStyle" "compressed") }}
