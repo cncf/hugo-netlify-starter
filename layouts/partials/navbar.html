@@ -4,47 +4,46 @@
 {{ $logo   := site.Params.logos.navbar }}
 {{ $menu   := site.Menus.main }}
 {{ $social := site.Params.social }}
-<nav class="navbar is-white is-fixed-top has-bottom-border" role="navigation" aria-label="main navigation">
+
+<div class="navbar navbar-expand-lg navbar-light bg-light sticky-top" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ $home }}">
         {{ if $logo }}
         {{ $url := printf "img/logos/%s" $logo | relURL }}
-        <img src="{{ $url }}">
+          <img src="{{ $url }}" width="200">
         {{ else }}
         {{ $title }}
         {{ end }}
       </a>
 
-      {{ if or $social $menu }}
-      <a role="button" class="navbar-burger" data-target="navbar-menu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-      {{ end }}
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
 
-    {{ if or $social $menu }}
-    <div class="navbar-menu" id="navbar-menu">
-      {{ with $menu }}
-      <div class="navbar-start">
+    <div class="collapse navbar-collapse" id="main-nav">
+      <ul class="navbar-nav mr-auto">
+        {{ with $menu }}
         {{ range . }}
         {{ $isHere := eq .URL $here }}
-        {{ $isExternal := hasPrefix .URL "http" }}
-        <a class="navbar-item{{ if $isHere }} is-active{{ end }}" href="{{ .URL }}"{{ if $isExternal }} target="_blank"{{ end }}>
-          {{ .Name }}
-        </a>
+        <li class="navbar-start navbar-item{{ if $isHere }} is-active{{ end }}">
+          {{ $isExternal := hasPrefix .URL "http" }}
+          <a class="nav-link" href="{{ .URL }}"{{ if $isExternal }} target="_blank"{{ end }}>
+            {{ .Name }}
+          </a>
+          {{ end }}
+        </li>
         {{ end }}
-      </div>
-      {{ end }}
-
-      {{ with $social }}
-      <div class="navbar-end">
-        {{ partial "social-buttons.html" . }}
-      </div>
-      {{ end }}
+      </ul>
     </div>
-    {{ end }}
-  </div>
-</nav>
+
+    <ul class="navbar-nav float-right">
+      {{ with $social }}
+      <li class="navbar-item">
+        {{ partial "social-buttons.html" . }}
+      </li>
+      {{ end }}
+    </ul>
+  </div> 
+</div>
