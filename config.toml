@@ -17,13 +17,9 @@ contentDir = "/content/"
 [params.logos]
 navbar = "cncf-color.png"
 
-[[params.colors.extra]]
-name = "twitter-blue"
-hex = "#00aced"
-
 [[params.social]]
 name = "Twitter"
-color = "twitter-blue"
+color = "#00aced"
 url = "https://twitter.com/CloudNativeFdn"
 icon = "fab fa-twitter"
 

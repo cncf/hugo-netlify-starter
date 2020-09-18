@@ -11,9 +11,9 @@
     {{ partial "favicon.html" . }}
   </head>
 
-    <body class="is-page has-navbar-fixed-top">
-    <main class="is-main">
+    <body>
       {{ partial "navbar.html" . }}
+    <main>
       {{ block "main" . }}
       {{ end }}
     </main>
