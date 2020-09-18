@@ -1,5 +1,5 @@
 {{ $allSections  := site.Sections }} <!-- "blog" and "docs" -->
-{{ $docsSections := where $allSections "Section" "docs" }} <!-- "getting-started" and "deployment" -->
+{{ $docsSections := where $allSections "Section" "test-content" }} <!-- "getting-started" and "deployment" -->
 {{ $thisUrl      := .RelPermalink }} <!-- the URL of the current page -->
 
 {{ range $docsSections }}
@@ -7,11 +7,11 @@
 <nav class="menu">
       <p class="menu-label">Documentation:</p>
       <ul class="menu-list">
-        <li><a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .CurrentSection.Title | markdownify }}</a>
+        <li><a {{ if $isThisPage }} class="active" {{ end }} href="{{ .RelPermalink }}">{{ .CurrentSection.Title | markdownify }}</a>
         {{ range .RegularPages }}
           <ul>
             <li>
-            <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">
+            <a {{ if $isThisPage }} class="active" {{ end }} href="{{ .RelPermalink }}">
               {{ .Title | markdownify }}
             </a>
             </li>
@@ -19,11 +19,11 @@
         {{ end }}
         </li>
     {{ range .Sections }}
-        <li><a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .CurrentSection.Title | markdownify }}</a>
+        <li><a {{ if $isThisPage }} class="active" {{ end }} href="{{ .RelPermalink }}">{{ .CurrentSection.Title | markdownify }}</a>
           <ul>
             {{ range .CurrentSection.RegularPages }}
             <li>
-                <a{{ if $isThisPage }} class="is-active"{{ end }} href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
+                <a {{ if $isThisPage }} class="active" {{ end }} href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
             </li>
             {{ end }}
           </ul>
