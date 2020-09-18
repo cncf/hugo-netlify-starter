@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bootstrap": "^4.5.2",
     "bulma": "^0.9.0"
   }
 }
