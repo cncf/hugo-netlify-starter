@@ -13,8 +13,8 @@
 </li>
 {{ end }}
 
-<div class="breadcrumb is-pulled-left" aria-label="breadcrumbs">
-  <ul>
+<div class="col col-8 breadcrumb" aria-label="breadcrumbs">
+  <ul class="mb-0 pt-2" style="vertical-align: middle">
     {{ template "breadcrumb" (dict "p1" . "p2" .) }}
   </ul>
 </div>

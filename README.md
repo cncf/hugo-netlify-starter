@@ -4,7 +4,7 @@ This repository contains a boilerplate static site generator setup for creating 
 
 The starter uses the following:
 * **[Hugo](https://gohugo.io/)** as a static site generator
-* **[Bulma](https://bulma.io/)** as a CSS framework
+* **[Bootstrap 4.5.x](https://getbootstrap.com/docs/4.5/getting-started/introduction/)** as a CSS framework
 * **[Netlify](https://www.netlify.com/)** for building, hosting, and DNS management
 
 ## Running locally
@@ -43,4 +43,4 @@ This repository has two layouts with minimal styling, all stored under `/layouts
   * The `single.html` file and partials in the `/partials/docs` directory
   * Classes in the `/assets/sass/helpers.sass` and `/assets/sass/_docs.sass` files
 
-Both use default components and styling from the Bulma CSS framework. No menus are structured, because menu structure is highly dependant on the nature of the project.
+Both use default components and styling from the Bootstrap CSS framework. No menus are structured, because menu structure is highly dependent on the nature of the project.
