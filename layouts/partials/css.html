@@ -5,7 +5,7 @@
 {{- $devOpts      := (dict "targetPath" $cssOutput "includePaths" $includePaths "enableSourceMap" true) }}
 {{- $prodOpts     := (dict "targetPath" $cssOutput "includePaths" $includePaths "outputStyle" "compressed") }}
 {{- $cssOpts      := cond $inServerMode $devOpts $prodOpts }}
-{{- $css          := resources.Get $sass | resources.ExecuteAsTemplate $sass . | toCSS $cssOpts }}
+{{- $css          := resources.Get $sass | resources.ExecuteAsTemplate "blah.sass" . | toCSS $cssOpts }}
 {{- if $inServerMode }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 {{- else }}

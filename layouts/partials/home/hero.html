@@ -2,12 +2,12 @@
 {{ $desc  := site.Params.description | markdownify }}
 <section class="jumbotron">
   <div class="container">
-    <p class="title is-size-1 is-size-2-mobile has-text-weight-light{{ if $desc }} is-spaced{{ end }}">
+    <h1>
       {{ $title }}
-    </p>
+    </h1>
 
     {{ with $desc }}
-    <p class="subtitle is-size-2 is-size-3-mobile has-text-weight-light">
+    <p class="lead">
       {{ . }}
     </p>
     {{ end }}
