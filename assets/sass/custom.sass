@@ -1,87 +1,99 @@
 // Custom.scss
 @charset "utf-8"
 
+{{ $extraColors := site.Params.colors.extra }}
+{{ $fontAwesomeVersion := site.Params.font_awesome_version }}
+{{ $fonts := site.Params.fonts }}
+
+{{ with $fontAwesomeVersion }}
+{{ $fontAwesomeUrl := printf "https://use.fontawesome.com/releases/v%s/css/all.css" . }}
+@import url("{{ $fontAwesomeUrl }}")
+{{ end }}
+
+{{ if $fonts }}
+{{ $fontSlice := (slice) }}
+{{ range $fonts }}
+{{ $fontSlice = $fontSlice | append (printf "%s:%s" (replace .name " " "+") (delimit .sizes ",")) }}
+{{ end }}
+{{ $fontsUrl := printf "https://fonts.googleapis.com/css?family=%s" (delimit $fontSlice "|") }}
+@import url("{{ $fontsUrl }}")
+{{ end }}
+
+
 // Required
-@import "bootstrap/scss/functions"
-@import "bootstrap/scss/variables"
-@import "bootstrap/scss/mixins"
+@import "bootstrap/scss/functions" 
+@import "bootstrap/scss/variables" 
+@import "bootstrap/scss/mixins" 
+@import "bootstrap/scss/root" 
 
-// Optional
-// Note: import these in roughly the same order as Bootstrap doc's left hand nav: 
+//Optional
+@import "bootstrap/scss/reboot" 
+@import "bootstrap/scss/type" 
+@import "bootstrap/scss/images" 
+@import "bootstrap/scss/code" 
+@import "bootstrap/scss/grid" 
+@import "bootstrap/scss/tables" 
+@import "bootstrap/scss/forms" 
+@import "bootstrap/scss/buttons" 
+@import "bootstrap/scss/transitions" 
+@import "bootstrap/scss/dropdown" 
+//@import "bootstrap/scss/button-group" 
+//@import "bootstrap/scss/input-group" 
+//@import "bootstrap/scss/custom-forms" 
+@import "bootstrap/scss/nav" 
+@import "bootstrap/scss/navbar" 
+//@import "bootstrap/scss/card" 
+//@import "bootstrap/scss/breadcrumb" 
+//@import "bootstrap/scss/pagination" 
+//@import "bootstrap/scss/badge" 
+@import "bootstrap/scss/jumbotron" 
+//@import "bootstrap/scss/alert" 
+//@import "bootstrap/scss/progress" 
+//@import "bootstrap/scss/media" 
+//@import "bootstrap/scss/list-group" 
+//@import "bootstrap/scss/close" 
+//@import "bootstrap/scss/toasts" 
+//@import "bootstrap/scss/modal" 
+//@import "bootstrap/scss/tooltip" 
+//@import "bootstrap/scss/popover" 
+//@import "bootstrap/scss/carousel" 
+//@import "bootstrap/scss/spinners" 
+@import "bootstrap/scss/utilities" 
+//@import "bootstrap/scss/print" 
 
-// Layout
-@import "bootstrap/scss/reboot"
-@import "bootstrap/scss/grid"
 
-// Content
-@import "bootstrap/scss/type"
-@import "bootstrap/scss/images"
-@import "bootstrap/scss/code"
+// Custom
 
-// Components
-@import "bootstrap/scss/nav"
-@import "bootstrap/scss/navbar"
-@import "bootstrap/scss/jumbotron"
-@import "bootstrap/scss/buttons"
+$font-family-headers: "Fira Sans" 
 
-// Utilities
-@import "bootstrap/scss/utilities"
-
-// Extra colors specified in config
 .breadcrumb 
   li
     list-style: none
     display: inline
   ul
     padding-left: 0
-    margin-left: 0 
 
-// //Etc 
-// {{ $extraColors := site.Params.colors.extra }}
-// {{ $fontAwesomeVersion := site.Params.font_awesome_version }}
-// {{ $fonts := site.Params.fonts }}
-// {{ if $fonts }}
-// {{ $fontSlice := (slice) }}
-// {{ range $fonts }}
-// {{ $fontSlice = $fontSlice | append (printf "%s:%s" (replace .name " " "+") (delimit .sizes ",")) }}
-// {{ end }}
-// {{ $fontsUrl := printf "https://fonts.googleapis.com/css?family=%s" (delimit $fontSlice "|") }}
-// @import url("{{ $fontsUrl }}")
-// {{ end }}
+.hashlink 
+  font-size: smaller !important
 
-// // colors
-// // 1 = lightest, 10 = darkest. These are an optical gradient - no opportunity for Sass color math
-// $cncf-blue: #426cab
-// $cncf-green: #76c5d5
+.highlight pre 
+  padding: 0.5rem
+  border-radius: 5px 
 
-// $cncf-blue-1: #F0F5F7
-// $cncf-blue-2: #E4F2F4
-// $cncf-blue-3: #CDEEF2
-// $cncf-blue-4: #B2E0EA
-// $cncf-blue-5: $cncf-green
-// $cncf-blue-6: #5BAECE
-// $cncf-blue-7: #4583BB
-// $cncf-blue-8: $cncf-blue
-// $cncf-blue-9: #1E4D94
-// $cncf-blue-10: #072C63
+.content 
+  table 
+    @extend .table
+ 
+  img 
+    @extend .img-fluid
 
-// $cncf-violet-1: #FFF5FA
-// $cncf-violet-2: #FCE2ED
-// $cncf-violet-3: #FAC6DD
-// $cncf-violet-4: #F492BE
-// $cncf-violet-5: #E70266
-// $cncf-violet-6: #B30163
-// $cncf-violet-7: #840363
-// $cncf-violet-8: #521A60
-// $cncf-violet-9: #32225E
-// $cncf-violet-10: #0F1433
+h1, h2, h3, h4, h5, h6 
+  font-family: $font-family-headers
+  margin-top: 100px
 
-// // Extra colors specified in config
-// {{ with $extraColors }}
-// {{ range . }}
-// ${{ .name }}: '{{ .hex }}'
-// {{ end }}
-// {{ end }}
-
-// // Custom 
-// @import "docs"
+nav 
+  ul 
+    list-style-type: none
+    padding-left: 0
+    ul
+      padding-left: 1.5rem

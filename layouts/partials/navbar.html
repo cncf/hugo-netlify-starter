@@ -16,11 +16,11 @@
         {{ $title }}
         {{ end }}
       </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="main-nav">
       <ul class="navbar-nav mr-auto">
@@ -36,14 +36,15 @@
         </li>
         {{ end }}
       </ul>
+      <ul class="navbar-nav float-right">
+        {{ with $social }}
+        <li class="navbar-item">
+          {{ partial "social-buttons.html" . }}
+        </li>
+        {{ end }}
+      </ul>
     </div>
 
-    <ul class="navbar-nav float-right">
-      {{ with $social }}
-      <li class="navbar-item">
-        {{ partial "social-buttons.html" . }}
-      </li>
-      {{ end }}
-    </ul>
+
   </div> 
 </div>
