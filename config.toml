@@ -17,13 +17,9 @@ contentDir = "/content/"
 [params.logos]
 navbar = "cncf-color.png"
 
-[[params.colors.extra]]
-name = "twitter-blue"
-hex = "#00aced"
-
 [[params.social]]
 name = "Twitter"
-color = "twitter-blue"
+color = "#00aced"
 url = "https://twitter.com/CloudNativeFdn"
 icon = "fab fa-twitter"
 
@@ -48,11 +44,11 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "CNCF"
-url = "https://cncf.io"
+name = "Test Content"
+url = "/test-content/"
 weight = 2
 
 [[menu.main]]
-name = "Test"
-url = "/docs/test-content/"
+name = "Theme Documentation"
+url = "#"
 weight = 3
