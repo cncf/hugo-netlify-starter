@@ -2,6 +2,8 @@ title = "Hugo Netlify Starter"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 copyright = "Cloud Native Computing Foundation"
 
+enableGitInfo = true
+
 [markup.highlight]
 style = "paraiso-dark"
 
@@ -9,17 +11,15 @@ style = "paraiso-dark"
 font_awesome_version = "5.12.0"
 description = "Boilerplate for building beautiful websites"
 favicon = "favicon.png"
+repositoryUrl = "https://github.com/cncf/hugo-netlify-starter"
+contentDir = "/content/"
 
 [params.logos]
 navbar = "cncf-color.png"
 
-[[params.colors.extra]]
-name = "twitter-blue"
-hex = "#00aced"
-
 [[params.social]]
 name = "Twitter"
-color = "twitter-blue"
+color = "#00aced"
 url = "https://twitter.com/CloudNativeFdn"
 icon = "fab fa-twitter"
 
@@ -29,9 +29,14 @@ sizes = [300, 400, 600, 700]
 type = "sans_serif"
 
 [[params.fonts]]
-name = "Roboto Mono"
+name = "Fira Mono"
 sizes = [300, 400, 600, 700]
 type = "monospace"
+
+[[params.fonts]]
+name = "Fire Sans"
+sizes = [100, 200, 300, 400, 500, 600, 700]
+type = "heading_font"
 
 [[menu.main]]
 name = "Home"
@@ -39,6 +44,11 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "CNCF"
-url = "https://cncf.io"
+name = "Test Content"
+url = "/test-content/"
 weight = 2
+
+[[menu.main]]
+name = "Theme Documentation"
+url = "#"
+weight = 3
