@@ -18,6 +18,12 @@ contentDir = "/content/"
 navbar = "cncf-color.png"
 
 [[params.social]]
+name = "GitHub"
+color = "#000000"
+url = "https://github.com/cncf/hugo-netlify-starter"
+icon = "fab fa-github"
+
+[[params.social]]
 name = "Twitter"
 color = "#00aced"
 url = "https://twitter.com/CloudNativeFdn"
