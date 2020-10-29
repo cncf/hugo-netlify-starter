@@ -1,6 +1,6 @@
 ---
 title: "Pod Overview"
-description: "This page provides an overview of `Pod`, the smallest deployable object in the Kubernetes object model."
+description: "This page provides an overview of Pod, provided here as a markdown example. Content source: https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/"
 date: 2020-01-07T14:59:38+01:00
 draft: true
 toc: true
