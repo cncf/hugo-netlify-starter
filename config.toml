@@ -1,6 +1,5 @@
 title = "Hugo Netlify Starter"
 disableKinds = ["taxonomy", "taxonomyTerm"]
-copyright = "Cloud Native Computing Foundation"
 
 enableGitInfo = true
 
@@ -8,6 +7,7 @@ enableGitInfo = true
 style = "paraiso-dark"
 
 [params]
+projectName = "Hugo Netlify Starter"
 font_awesome_version = "5.12.0"
 description = "Boilerplate for building beautiful websites"
 favicon = "favicon.png"
@@ -16,6 +16,12 @@ contentDir = "/content/"
 
 [params.logos]
 navbar = "cncf-color.png"
+
+[[params.social]]
+name = "GitHub"
+color = "#000000"
+url = "https://github.com/cncf/hugo-netlify-starter"
+icon = "fab fa-github"
 
 [[params.social]]
 name = "Twitter"
