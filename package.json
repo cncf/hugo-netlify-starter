@@ -8,6 +8,6 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "hugo-extended": "^0.76.5"
+    "hugo-extended": "^0.85.0"
   }
 }

@@ -2,6 +2,8 @@
 {{ $toc := .TableOfContents }}
 
 {{ if ($hastoc) }}
-  <p> On this page:</p>
-  {{ $toc }}
+  <div class="toc">
+    <p> On this page:</p>
+    {{ $toc }}
+  </div>
 {{ end }}
