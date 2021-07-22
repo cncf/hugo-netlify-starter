@@ -21,7 +21,7 @@ To get started, you need to have Hugo and [Yarn](https://yarnpkg.com) installed.
 ```shell
 git clone https://github.com/cncf/hugo-netlify-starter && cd hugo-netlify-starter
 
-# Install npm assets (just Bulma for Sass/CSS)
+# Install npm assets
 yarn
 
 # Run the server locally

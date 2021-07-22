@@ -12,7 +12,7 @@ The starter uses the following:
 Make sure you have [npm](https://www.npmjs.com/) and [yarn](https://yarnpkg.com/) installed. Clone this repository and run the following two commands in its directory:
 
 ```shell
-# Install npm assets (just Bulma for Sass/CSS)
+# Install npm assets
 yarn
 
 # Run the server locally
