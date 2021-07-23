@@ -14,13 +14,12 @@ The starter uses the following:
 
 ## Running locally
 
-Make sure you have [npm](https://www.npmjs.com/) and
-[yarn](https://yarnpkg.com/) installed. Clone this repository and run the
-following two commands in its directory:
+Make sure you have [npm](https://www.npmjs.com/) installed. Clone this
+repository and run the following two commands in its directory:
 
 ```shell
 # Install npm assets
-yarn
+npm install
 
 # Run the server locally
 make serve

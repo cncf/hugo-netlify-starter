@@ -13,15 +13,3 @@ This is *not* a full-fledged Hugo theme! It's just a convenient way to get start
   * Some extra colors
   * A Twitter button
   * Some copyright text for the footer
-
-To get started, you need to have Hugo and [Yarn](https://yarnpkg.com) installed. Once those are installed:
-
-```shell
-git clone https://github.com/cncf/hugo-netlify-starter && cd hugo-netlify-starter
-
-# Install npm assets
-yarn
-
-# Run the server locally
-make serve
-```

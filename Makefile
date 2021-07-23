@@ -1,7 +1,4 @@
-yarn:
-	yarn
-
-serve: yarn
+serve:
 	hugo server \
 		--buildDrafts \
 		--buildFuture \
