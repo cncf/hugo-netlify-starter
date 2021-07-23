@@ -49,19 +49,14 @@ url = "https://twitter.com/CloudNativeFdn"
 icon = "fab fa-twitter"
 
 [[params.fonts]]
-name = "Fira Sans"
-sizes = [300, 400, 600, 700]
-type = "sans_serif"
-
-[[params.fonts]]
-name = "Fira Mono"
-sizes = [300, 400, 600, 700]
-type = "monospace"
-
-[[params.fonts]]
-name = "Fire Sans"
-sizes = [100, 200, 300, 400, 500, 600, 700]
+name = "Roboto"
+sizes = [400, 500, 700]
 type = "heading_font"
+
+[[params.fonts]]
+name = "Open Sans"
+sizes = [400, 600, 700]
+type = "sans_serif"
 
 [[menu.main]]
 name = "Home"
@@ -69,7 +64,6 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Sample Content"
+name = "Documentation"
 url = "/docs/"
 weight = 2
-

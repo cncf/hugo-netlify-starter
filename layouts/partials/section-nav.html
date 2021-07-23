@@ -4,9 +4,10 @@
 
 {{ range $docsSections }}
 {{ $isThisPage := eq .RelPermalink $thisUrl }}
+
 <nav class="section-nav">
-      <p class="menu-label">Documentation:</p>
-      <ul class="menu-list">
+      <p class="menu-label open" id="leftnavToggle">Documentation:</p>      
+      <ul class="menu-list" id="leftnav">
         <li><a {{ if $isThisPage }} class="active" {{ end }} href="{{ .RelPermalink }}">{{ .CurrentSection.LinkTitle | markdownify }}</a>
         {{ range .RegularPages }}
           <ul>

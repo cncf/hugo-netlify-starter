@@ -1,7 +1,8 @@
 ---
-title: Docs smoke test page
+title: Demo Page
 description: "Smoke test page, repurposed from https://github.com/kubernetes/website/blob/master/content/en/docs/test.md"
 main_menu: false
+toc: true
 ---
 
 This page serves two purposes:
@@ -10,7 +11,7 @@ This page serves two purposes:
 - Provide a "smoke test" document we can use to test HTML, CSS, and template
   changes that affect the overall documentation.
 
-## Heading levels
+## Heading levels {#heading-levels}
 
 The above heading is an H2. The page title renders as an H1. The following
 sections show H3-H6.
@@ -322,4 +323,21 @@ The reader should proceed with caution.
 {{< warning >}}
 Warnings point out something that could cause harm if ignored.
 {{< /warning >}}
+
+### Code blocks
+
+This is `what a preformatted string` looks like.
+
+Code blocks can be formatted using ```, like so:
+~~~
+```bash
+$ example command
+bash: example: command not found
+```
+~~~
+generating:
+```bash
+$ example command
+bash: example: command not found
+```
 
