@@ -206,6 +206,33 @@ Common languages used in Kubernetes documentation code blocks include:
 - `xml`
 - `none` (disables syntax highlighting for the block)
 
+The following are some examples of inline code blocks:
+
+```html
+<html>
+  <div>
+    <p>Sample HTML</p>
+  </div>
+</html>
+```
+
+```js
+function myFunction() {
+  console.log("A JavaScript function");
+}
+```
+
+```css
+body
+  font-family: $font-family-body
+  font-size: .9rem
+  font-color: $font-color
+
+.logo
+  max-width: 200px
+```
+
+
 ### Code blocks containing Hugo shortcodes
 
 To show raw Hugo shortcodes as in the above example and prevent Hugo
