@@ -56,7 +56,7 @@ labels:
   - name: e0-minutes
     description: "Effort: < 60 min"
     color: e6ccb3
-  # Default new repo labels
+  # GitHub default labels
   - name: bug
     description: "Something isn't working"
     color: d73a4a
