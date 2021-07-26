@@ -1,9 +1,7 @@
 # Hugo-generated assets
-public/
-resources/
+/public
+/resources
 
 # npm assets
 node_modules/
-
-# files
 package-lock.json
