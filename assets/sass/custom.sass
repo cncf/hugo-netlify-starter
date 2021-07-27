@@ -221,6 +221,9 @@ nav
 
   .navbar-nav 
     flex-direction: inherit
+  
+  .navbar .container
+    padding: 0
 
   @media (max-width: 650px) 
     .col-8 
@@ -238,6 +241,13 @@ nav
         color: $primary-color
         text-decoration: none
 
+.jumbotron 
+  .container
+    padding-left: 0
+
+@media (min-width: 576px)
+  .jumbotron
+    padding: 2rem 1rem
   
 // make main container width wider at different breakpoints to take advantage of screen real estate
 .container 
@@ -289,7 +299,7 @@ footer
   flex-shrink: 0
   box-sizing: border-box
   width: 100%
-  padding: 2rem
+  padding: 2rem 0
   a
     color: lighten($primary-color, 30%)
     text-decoration: none
