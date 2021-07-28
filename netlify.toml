@@ -1,9 +1,9 @@
 [build]
 publish = "public"
-command = "make production-build"
+command = "npm run build:production"
 
 [context.deploy-preview]
-command = "make preview-build"
+command = "npm run build:preview"
 
 [context.branch-deploy]
-command = "make preview-build"
+command = "npm run build:preview"

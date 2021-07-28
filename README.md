@@ -7,8 +7,7 @@ strictly required.
 
 The starter uses the following:
 
-* **[Hugo (extended, v0.73 or above)](https://gohugo.io/)** as a static site
-  generator
+* **[Hugo](https://gohugo.io/)** as a static site generator
 * **[Bootstrap 4.5.x](https://getbootstrap.com/docs/4.5/getting-started/introduction/)** as a CSS framework
 * **[Netlify](https://www.netlify.com/)** for building, hosting, and DNS management
 
@@ -22,7 +21,7 @@ repository and run the following two commands in its directory:
 npm install
 
 # Run the server locally
-make serve
+npm run serve
 ```
 
 ## Running on Netlify
