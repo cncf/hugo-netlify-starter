@@ -65,5 +65,40 @@ menu:
       url: /
       weight: 1
     - name: Documentation
-      url: /docs/
+      url: /en/docs/
       weight: 2
+
+
+# Internationalization
+
+defaultContentLanguage: en
+
+# show language abbreviation in url. If you enable this option, remember to update image paths
+# defaultContentLanguageInSubdir: true
+languages:
+  ar:
+    contentDir: content/ar
+    languageName: عربى
+    languagedirection: rtl
+    title: مدونتي
+    weight: 2
+  en:
+    contentDir: content/en
+    languageName: English
+    title: My project
+    weight: 1
+  esp:
+    contentDir: content/spa
+    languageName: Español
+    title: Mi proyecto
+    weight: 2
+  fr:
+    contentDir: content/fr
+    languageName: Français
+    title: Mon projet
+    weight: 2
+  pt-pt:
+    contentDir: content/pt
+    languageName: Português
+    title: O meu blog
+    weight: 3

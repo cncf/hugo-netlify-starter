@@ -21,6 +21,8 @@
     <body>
       {{ partial "navbar.html" . }}
     <main class="content">
+      {{ partial "i18nlist.html" }}
+      {{ partial "allLanguages.html" }}
       {{ block "main" . }}
       {{ end }}
     </main>
