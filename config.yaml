@@ -58,6 +58,9 @@ params:
         - 600
         - 700
       type: sans_serif
+  versions:
+    - latest: "v2"
+    - all: ["v1"]
 
 menu:
   main:
@@ -67,3 +70,6 @@ menu:
     - name: Documentation
       url: /docs/
       weight: 2
+    - name: Versions
+      # url: ??
+      weight: 3
