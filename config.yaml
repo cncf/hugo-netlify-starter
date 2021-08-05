@@ -67,3 +67,6 @@ menu:
     - name: Documentation
       url: /docs/
       weight: 2
+    - name: Versions
+      # url: ??
+      weight: 3
