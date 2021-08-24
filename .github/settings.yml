@@ -24,8 +24,6 @@ collaborators:
     permission: admin
   - username: sftim
     permission: admin
-  - username: kapunahelewong
-    permission: admin
 
 # Labels: define labels for Issues and Pull Requests
 labels:
